@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+  color: white;
+  
+}
+
+@font-face {
+  font-family: 'fonte';
+src: url('../fonte/fonte.otf') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+  font-family: 'fonte';
+  position: relative;
+  background-color: rgb(9,9,10);
+    
+}
+.eyck{
+  font-family:'fonte';
+            background: none;        /* Remove a cor de fundo cinza */
+            border: none;            /* Remove a borda padrão */
+            padding: 0;   
+            
+            font-size: 1.1rem;       /* Define o tamanho do texto de forma flexível (ajuste o valor como preferir) */
+  line-height: 1.2;
+  
+}
+
+
+
+.NovoBotao {
+  /* 1. Mudado para block para o elemento existir na tela */
+  display: none; 
+
+  /* 3. Definimos um tamanho mínimo para garantir que a imagem tenha espaço para aparecer */
+  min-width: 150px; 
+  min-height: 50px;
+  
+  text-align: center;         
+  width: fit-content;      
+  margin: 1.5rem auto;     
+  padding: 0.8rem 1.2rem;  
+  border: 1px solid white;
+  color: white;             /* Cor do texto para você conseguir ler sobre o fundo preto */
+  
+  font-size: 1.1rem;       
+  line-height: 1.2;        
+}
+
+
+.nao {
+            font-family:'fonte';
+            background: none;        /* Remove a cor de fundo cinza */
+            border: none;            /* Remove a borda padrão */
+            padding: 0;   
+            
+            font-size: 1.1rem;       /* Define o tamanho do texto de forma flexível (ajuste o valor como preferir) */
+  line-height: 1.2;
+}
+
+a{
+  text-decoration: none;
+}
