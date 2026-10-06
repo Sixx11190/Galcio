@@ -6,6 +6,9 @@
     <title>Galcio | Moda Versátil para Todos os Estilos</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a0a">
 </head>
 <body>
 
@@ -16,7 +19,7 @@
             <a href="#">Coleções</a>
             <a href="#">Sobre Nós</a>
             <a href="#contato" id="link-contato">Contato</a>
-            <a href="#">SignUp/SignIn</a>
+            <a href="#" id="btn-auth">SignUp/SignIn</a>
         </nav>
     </header>
 
@@ -62,7 +65,9 @@
     </div>
 
     <footer id="contato">
-        <p>&copy; 2026 Galcio. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Galcio. Todos os direitos reservados.<br>
+            entre em contato conosco: +55-19998065346
+        </p>
     </footer>
     
     <script>
@@ -73,9 +78,43 @@
         document.getElementById('link-contato').addEventListener('click', function(e){
             console.log("O usuario clicou no link de contato.");
         });
-
-        
+  
     </script>
-    <script src="js/script.js"></script>
+
+    <script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('Service Worker registrado com sucesso!'))
+      .catch((err) => console.log('Erro ao registrar o Service Worker:', err));
+  }
+  </script>
+  
+  <div id="auth-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+
+        <button id="close-modal" class="close-btn">&times;</button>
+
+        <div class="modal-tabs">
+            <button id="tab-signin" class="tab-btn active">Entrar</button>
+            <button id="tab-signup" class="tab-btn">Cadastrar</button>
+        </div>
+
+        <form id="form-signin" class="auth-form">
+            <h2>Bem-Vindo de volta!</h2>
+            <input type="email" placeholder="Seu e-mail" required>
+            <input type="password" placeholder="Sua senha" required>
+            <button type="submit" class="submit-btn">Entrar</button>
+        </form>
+
+        <form id="form-signup" class="auth-form hidden">
+            <h2>Crie sua conta</h2>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <input type="password" placeholder="Crie uma senha" required>
+            <button type="submit" class="submit-btn">Cadastrar</button>
+        </form>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
