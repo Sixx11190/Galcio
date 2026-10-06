@@ -13,7 +13,10 @@
 <body>
 
     <header>
-        <div class="logo">GALCIO</div>
+        <div class="header-left">
+            <button id="open-sidebar" class="btn-hamburguer" arial-label="Abrir Menu">☰</button>
+              <div class="logo">GALCIO</div>
+        </div>
         <nav>
             <a href="#">Início</a>
             <a href="#">Coleções</a>
@@ -22,6 +25,22 @@
             <a href="#" id="btn-auth">SignUp/SignIn</a>
         </nav>
     </header>
+
+    <aside id="sidebar" class="sidebar">
+        <button id="close-sidebar" class="btn-fechar">&times;</button>
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Drops Especiais</a></li>
+            <li><a href="#">Limitados</a></li>
+            <li><a href="#">Ofertas</a></li>
+        </ul>
+    </aside>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
     <section class="hero" id="inicio">
         <h1>Bem-vindo ao Galcio</h1>
@@ -34,7 +53,7 @@
 
         <div class="grid-produtos">
             <div class="card-produto">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop" alt="Look Casual Elegante">
+                <img src="https://i.pinimg.com/736x/70/79/de/7079de61b0f6f1aefaeeff950c8dc783.jpg" alt="Look Casual Elegante">
                 <div class="card-info">
                     <h3>Casual Elegante</h3>
                     <p>R$ 249,90</p>
@@ -45,7 +64,7 @@
             </div>
 
             <div class="card-produto">
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop" alt="Look Urbano">
+                <img src="https://i.pinimg.com/736x/56/af/69/56af69813fa9f9e5fe24af2edcb21709.jpg" alt="Look Urbano">
                 <div class="card-info">
                     <h3>Look Urbano</h3>
                     <p>R$ 189,90</p>
@@ -54,7 +73,7 @@
             </div>
 
             <div class="card-produto">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600&auto=format&fit=crop" alt="Look Minimalista">
+                <img src="https://i.pinimg.com/736x/28/72/10/287210c442ae63db8e9196fc8f6eafe6.jpg" alt="Look Minimalista">
                 <div class="card-info">
                     <h3>Look Minimalista</h3>
                     <p>R$ 152,90</p>

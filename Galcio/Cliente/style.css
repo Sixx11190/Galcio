@@ -95,7 +95,7 @@ nav a:hover::after {
     text-align: center;
     padding: 0 1rem;
     background: linear-gradient(180deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.95) 100%), 
-    url('https://assets.awwwards.com/awards/submissions/2026/09/6a969f035df59433524439.png') no-repeat center center/cover;
+    url('https://i.pinimg.com/736x/21/e0/7a/21e07a3d32222e34a68352a36d397359.jpg') no-repeat center center/cover;
 }
 
 .hero h1 {
@@ -266,7 +266,7 @@ footer {
     z-index: 2000;
 }
 
-.modal-overlay.hidden {
+.hidden {
     display: none !important;
 }
 
@@ -353,4 +353,107 @@ footer {
 
 .submit-btn:hover {
     background: #ccc;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-hamburguer {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    transition: opacity 0.2s; 
+}
+
+.btn-hamburguer:hover {
+    opacity: 0.7;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100vh;
+    background-color: #0a0a0a;
+    border-right: 1px solid #222;
+    z-index: 1001;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar-header h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.sidebar-menu a:hover {
+    color: #fff;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
