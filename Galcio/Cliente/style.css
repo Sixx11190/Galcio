@@ -84,17 +84,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Vídeo fixado no fundo */
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* Mantém a proporção do vídeo sem distorcer */
-  z-index: -1; /* Garante que fique atrás de todos os elementos */
-}
-
 /* --- SEÇÃO HERO --- */
 .hero {
     position: relative;
@@ -106,32 +95,13 @@ nav a:hover::after {
     text-align: center;
     padding: 0 1rem;
     overflow: hidden;
-}
-
-.espada-fundo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -63%);
-    z-index: 1;
-    width: 900px;
-    max-width: 90%;
-    pointer-events: none;
+    background: fixed,
+    url('https://images.unsplash.com/photo-1782357091589-a3382cabc067?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') no-repeat center top/cover;
 }
 
 .hero-conteudo {
     position: relative;
     z-index: 10;
-}
-
-#hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
 }
 
 .hero h1 {
