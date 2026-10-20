@@ -38,6 +38,7 @@
             <li><a href="#">Drops Especiais</a></li>
             <li><a href="#">Limitados</a></li>
             <li><a href="#">Ofertas</a></li>
+            <li><a href="#" id="IA">Stark Assistente</a></li>
         </ul>
     </aside>
 
@@ -110,6 +111,22 @@
       .catch((err) => console.log('Erro ao registrar o Service Worker:', err));
   }
   </script>
+
+  <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6ad7c7588939b95c66fca039' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: 'https://runtime-api.voiceflow.com'
+          }
+        });
+      }
+      v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'; v.type = 'text/javascript'; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
   
   <div id="auth-modal" class="modal-overlay hidden">
     <div class="modal-content">
